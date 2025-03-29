@@ -2,6 +2,7 @@ import { INCREMENT, DECREMENT } from "./action";
 
 const initialState = {
     count: 10,
+    employee : {}
 }
 
 const CounterReducer = (state = initialState, action) => {

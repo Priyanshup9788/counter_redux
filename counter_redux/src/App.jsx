@@ -1,17 +1,24 @@
 
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { decremnet, increment } from './redux/action'
+import AddEmp from './assets/Components/AddEmp'
+import Counter from './assets/Components/Counter'
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Header from './assets/Components/Header'
+import ViewEmp from './assets/Components/ViewEmp'
+
 
 function App() {
-  
-  let dispatch = useDispatch();
-  let count = useSelector((state)=>state.count)
+ 
   return (
     <>
-      <button onClick={()=>dispatch(increment())}>Increment</button>
-      <p>{count}</p>
-      <button onClick={()=>dispatch(decremnet())}>Decrement</button>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={<Counter />}></Route>
+          <Route path='/addemp/' element={<AddEmp></AddEmp>}></Route>
+          <Route path='/viewemp/' element={<ViewEmp></ViewEmp>}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
