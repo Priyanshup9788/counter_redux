@@ -1,7 +1,9 @@
 export const loadState = ()=>{
     try{
-        let allEmp = localStorage.getItem("employee");
-        return allEmp ? JSON.parse(allEmp) : [];
+        const allEmp = localStorage.getItem('employee');
+        if (allEmp === null) return undefined; 
+        return JSON.parse(allEmp);
+
     }catch(err){
         console.log(err);
         return undefined;

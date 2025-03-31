@@ -5,11 +5,12 @@ const ViewEmp = () => {
 
     
     const [allEmp,setAllEmp] = useState(()=>{
-        let allEmp = useSelector((state)=>state.employee.employee);
+        let allEmp = useSelector((state)=>state.employee);
         return allEmp;
 
     });
 
+    console.log(allEmp)
 
   return (
     <table border={1}>

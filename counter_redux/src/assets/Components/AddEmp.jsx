@@ -16,7 +16,7 @@ const AddEmp = () => {
         }
 
         dispatch(addEmp(newEmp));
-        setNewEmp([])
+        setNewEmp({})
 
     }
 

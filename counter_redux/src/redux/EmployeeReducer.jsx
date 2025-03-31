@@ -17,7 +17,7 @@ const EmplyeeReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_EMP:
             {
-                return { ...state.employee, employee: [...state.employee , action.payload] };
+                return { ...state, employee: [...state.employee,{...action.payload}] };
             }
         case VIEW_EMP:
             {
